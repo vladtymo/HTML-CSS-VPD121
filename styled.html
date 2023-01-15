@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Styled HTML Page</title>
+
+    <style>
+        /* -=-=-=-=-=-=-=- CSS Selectors -=-=-=-=-=-=-=- */
+        /* selector {
+            property: value;
+            property: value;
+        } */
+
+        /* ---------- Tag Selectors ---------- */
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h2 {
+            background-color: rgb(26, 26, 88);
+            color: white;
+            text-align: center;
+            padding: 10px;
+            border-radius: 6px;
+        }
+
+        p {
+            color: gray;
+        }
+
+        mark {
+            background-color: lightcoral;
+            padding: 2px;
+            border-radius: 4px;
+            font-family: fantasy;
+            font-size: 18px;
+            /* font-style: italic; */
+        }
+
+        abbr {
+            text-decoration: underline;
+            font-weight: bold;
+        }
+
+        strong {
+            font-weight: normal;
+            border: 1px solid black;
+            padding: 2px;
+        }
+
+        img {
+            float: left;
+            margin: 0 10px 30px 0;
+        }
+
+        /* ---------- Class Selectors ---------- */
+        .super {
+            color: darkslateblue;
+            text-transform: uppercase;
+        }
+
+        .clear {
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="color: darkblue; text-align: center; text-transform: uppercase;">Intro to CSS</h1>
+
+    <h3>CSS Example</h3>
+    <p>
+        <img width="500"
+            src="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics/css-declaration-small.png"
+            alt="CSS Example">
+        Cascading Style Sheets is a style sheet language used for describing the presentation of a document written
+        in a markup language such as HTML or XML. CSS is a cornerstone technology of the World Wide Web, alongside
+        HTML and JavaScript. <a href="https://en.wikipedia.org/wiki/CSS">Wikipedia</a>
+    </p>
+
+    <h2 class="clear">Heading level 2</h2>
+    <h3>Heading level 3</h3>
+    <h4>Heading level 4</h4>
+    <h5>Heading level 5</h5>
+    <h6>Heading level 6</h6>
+
+    <!-- F12 - show source code in browser -->
+
+    <p class="super">This is paragraph.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi deserunt at facere facilis. Obcaecati, quis
+        laudantium temporibus omnis explicabo a exercitationem, commodi earum fuga ratione recusandae blanditiis ad
+        eaque quod!</p>
+    <p class="super">Lorem ipsum dolor sit amet consectetur.</p>
+
+    <h2>IT Step Academy Address</h2>
+    <address>Soborna street, building 16a, Rivne, Ukraine</address>
+
+    <h2>Block Quote</h2>
+    <blockquote>
+        Living well is the<br>
+        best revenge.<br>
+        George Herbert
+    </blockquote>
+
+    <h2>Inline Quote</h2>
+    <p>Quote of the day: <q>Living well is the best revenge.</q></p>
+
+    <p>The <abbr title="HyperText Markup Language">HTML</abbr> is the standard markup language for documents designed to
+        be displayed in a web browser.</p>
+
+    <p>Lorem <strong>ipsum dolor sit</strong> amet consectetur adipisicing elit. <strong>Quia et</strong> error suscipit
+        obcaecati? Quo
+        doloribus quam
+        nihil <em>assumenda similique</em>, aliquam voluptatem non <mark>laboriosam</mark>, eum optio iusto porro,
+        <mark>quaerat tenetur</mark>
+        alias.
+    </p>
+    <hr>
+    <p>
+        Keyboard shortcut: <kbd>Ctrl+/</kbd> - comment or uncomment<br>
+        Sample: <samp>2 + 2 * 2 = 6</samp><br>
+        Variable <var>$number</var> with value of 0<br>
+        <dfn>Programming language</dfn> - system of notation for writing computer programs.<br>
+        HTML 5 version: <code>&lt;!DOCTYPE html&gt;</code>
+    </p>
+</body>
+
+</html>
