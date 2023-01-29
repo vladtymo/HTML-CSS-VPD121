@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lists</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .reset {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* --------------- unordered lists styles --------------- */
+        ul.custom-style {
+            list-style-type: square;
+            list-style-position: inside;
+            color: gray;
+        }
+
+        /* ::marker - pseudo class for list marker styling  */
+        .custom-style li::marker {
+            color: green;
+        }
+
+        .custom-style li.important::marker {
+            color: red;
+        }
+
+        ul.image-marker {
+            list-style-image: url(./images/ukraine.png);
+        }
+
+        /* --------------- ordered lists styles --------------- */
+        ol.custom-ol-style {
+            list-style-type: decimal;
+        }
+
+        /* --------------- definition lists styles --------------- */
+        dl dt {
+            background-color: darkblue;
+            color: white;
+
+            font-size: 32px;
+            font-weight: bold;
+            text-align: center;
+            padding: 10px;
+            border-radius: 8px;
+            margin-top: 12px;
+        }
+
+        dl dd {
+            background-color: black;
+            color: white;
+
+            margin-left: 0;
+            margin-top: 4px;
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+        /* --------------- multilevel lists styles --------------- */
+        /* level 2> */
+        ol>li>ol {
+            color: darkcyan;
+        }
+
+        /* level 3> */
+        ol ol ul {
+            color: darkblue;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Working with Lists in HTML</h1>
+
+    <h2>Unordered List</h2>
+    <!-- Emmet: ul>li*5>lorem7 -->
+    <ul class="custom-style">
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing. Lorem ipsum dolor sit, amet consectetur adipisicing
+            elit. Iusto pariatur quasi in error! Unde ea laudantium eius veritatis culpa cumque nihil expedita esse
+            similique facilis voluptas, fuga ullam repellat eum!</li>
+        <li class="important">Maxime ex suscipit mollitia, voluptatem ad possimus.</li>
+        <li>Mollitia quis omnis possimus, maxime cupiditate ducimus.</li>
+        <li>Dolorem dignissimos pariatur magnam quaerat earum nobis?</li>
+        <li class="important">Eius porro culpa, quaerat velit expedita illo.</li>
+    </ul>
+
+    <h3>List with reseted styles</h3>
+    <ul class="reset">
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Sapiente omnis quaerat vitae laboriosam?</li>
+        <li>Soluta et pariatur sequi corrupti?</li>
+    </ul>
+
+    <h3>List with image as a marker</h3>
+    <ul class="image-marker">
+        <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
+        <li>Ea doloremque deleniti quos ab voluptatem amet quisquam.</li>
+        <li>Fugit iusto, perferendis doloribus voluptate labore nisi officiis.</li>
+        <li>Ducimus omnis tenetur neque at explicabo iusto alias.</li>
+        <li>Eius, voluptatibus! Nam quos autem delectus quam ducimus?</li>
+        <li>Possimus alias amet eligendi laudantium in iusto magnam.</li>
+    </ul>
+
+    <h2>Ordered List</h2>
+    <ol class="custom-ol-style" start="3" reversed>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis.</li>
+        <li>Sit odit fuga ducimus doloribus, omnis sunt ullam commodi.</li>
+        <li>Inventore dicta enim fugiat alias voluptate quasi eum quo!</li>
+        <li>Iste, quo. Sed voluptate autem quaerat? Quis, nemo nihil.</li>
+        <li>Odit accusamus eum nulla exercitationem. Repellendus unde labore sint.</li>
+        <li value="30">Cupiditate laborum dicta alias maiores voluptas corrupti? Id, soluta.</li>
+        <li>Aperiam, necessitatibus. Ut, deserunt quaerat totam perferendis maxime eligendi.</li>
+        <li>Numquam, libero. Deserunt hic ipsum ducimus? Debitis, nobis pariatur.</li>
+    </ol>
+
+    <h2>Definition List</h2>
+    <dl>
+        <!-- title -->
+        <!-- decription -->
+        <dt>HTML</dt>
+        <dd>The HyperText Markup Language or HTML is the standard markup language for documents designed to be displayed
+            in a web browser.</dd>
+        <dt>CSS</dt>
+        <dd>Cascading Style Sheets is a style sheet language used for describing the presentation of a document written
+            in a markup language such as HTML or XML. CSS is a cornerstone technology of the World Wide Web, alongside
+            HTML and JavaScript.</dd>
+        <dt>JS</dt>
+        <dd>JavaScript, often abbreviated as JS, is a programming language that is one of the core technologies of the
+            World Wide Web, alongside HTML and CSS. As of 2022, 98% of websites use JavaScript on the client side for
+            webpage behavior, often incorporating third-party libraries.</dd>
+    </dl>
+
+    <h2>Multilevel List</h2>
+    <ol>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, voluptatibus.</li>
+        <li>Quos aperiam, quo dolore fugit repellat a ex quasi harum?
+            <ol>
+                <li>Lorem ipsum dolor sit amet.</li>
+                <li>Fugit excepturi cupiditate suscipit assumenda.</li>
+                <li>Quisquam nostrum unde expedita sunt.
+                    <ul>
+                        <li>Lorem ipsum dolor sit amet.</li>
+                        <li>Unde inventore quis suscipit repudiandae!</li>
+                    </ul>
+                </li>
+                <li>Incidunt sint quas vitae vel.</li>
+            </ol>
+        </li>
+        <li>Inventore, laborum rem! Explicabo dolores, accusantium est similique maiores nisi?</li>
+        <li>Excepturi nemo ex, tempora ipsa nisi dolores dolorum ea ullam.</li>
+        <li>Quae enim beatae error nisi ex voluptatem facere commodi expedita.
+            <ol>
+                <li>Lorem ipsum dolor sit amet.</li>
+                <li>Fugit excepturi cupiditate suscipit assumenda.</li>
+                <li>Quisquam nostrum unde expedita sunt.
+                    <ul>
+                        <li>Lorem ipsum dolor sit amet.</li>
+                        <li>Unde inventore quis suscipit repudiandae!</li>
+                    </ul>
+                </li>
+                <li>Incidunt sint quas vitae vel.</li>
+            </ol>
+        </li>
+        <li>Officia incidunt distinctio animi debitis eos suscipit cum dolores iusto!
+            <ol>
+                <li>Lorem ipsum dolor sit amet.</li>
+                <li>Fugit excepturi cupiditate suscipit assumenda.</li>
+                <li>Quisquam nostrum unde expedita sunt.
+                    <ul>
+                        <li>Lorem ipsum dolor sit amet.</li>
+                        <li>Unde inventore quis suscipit repudiandae!</li>
+                    </ul>
+                </li>
+                <li>Incidunt sint quas vitae vel.</li>
+            </ol>
+        </li>
+    </ol>
+</body>
+
+</html>
