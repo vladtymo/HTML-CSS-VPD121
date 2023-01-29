@@ -75,6 +75,31 @@
         ol ol ul {
             color: darkblue;
         }
+
+        /* --------------- pseudo elements --------------- */
+        /* ::before and ::after */
+        h2::before,
+        h2::after {
+            content: '*';
+            color: red;
+        }
+
+        .custom-marker-content {
+            list-style-type: none;
+
+            /* create counter */
+            counter-reset: number;
+        }
+
+        .custom-marker-content li::before {
+            /* get counter value */
+            content: '/' counter(number) '/ = ';
+
+            /* increment counter value */
+            counter-increment: number;
+
+            font-weight: bold;
+        }
     </style>
 </head>
 
@@ -120,6 +145,16 @@
         <li value="30">Cupiditate laborum dicta alias maiores voluptas corrupti? Id, soluta.</li>
         <li>Aperiam, necessitatibus. Ut, deserunt quaerat totam perferendis maxime eligendi.</li>
         <li>Numquam, libero. Deserunt hic ipsum ducimus? Debitis, nobis pariatur.</li>
+    </ol>
+
+    <h3>List with custom marker content</h3>
+    <ol class="custom-marker-content">
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+        <li>Nihil, hic? Ipsam alias dignissimos laudantium iste fugiat.</li>
+        <li>Dicta nostrum provident reiciendis laboriosam totam consectetur explicabo?</li>
+        <li>Ratione aliquid modi rem odio, quam earum ipsam!</li>
+        <li>Expedita aliquam et ipsam ullam quo, reiciendis voluptate!</li>
+        <li>Est unde error facilis qui iure ad cupiditate!</li>
     </ol>
 
     <h2>Definition List</h2>
