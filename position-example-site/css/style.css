@@ -1,0 +1,264 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+header {
+    height: 600px;
+    background: url(../images/top-header.jpg) center/cover fixed;
+    overflow: hidden;
+}
+
+/*-- Navigation - position: fixed --*/
+/* Елемент позиціонується відносно сторін вікна браузера */
+header nav {
+    height: 70px;
+    background-color: #43B02A;
+    padding: 10px;
+    color: white;
+
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+.logo {
+    float: left;
+}
+
+header ul {
+    float: right;
+}
+
+.logo img {
+    margin: 0 10px;
+    vertical-align: middle;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+}
+
+nav li a {
+    text-decoration: none;
+    color: white;
+    padding: 0 5px;
+}
+
+nav li a:hover {
+    text-decoration: underline;
+}
+
+header h1 {
+    text-align: center;
+    font-size: 3em;
+    margin-top: 250px;
+    color: white;
+    text-shadow: 0 0 3px white;
+}
+
+.wrap {
+    margin: -50px 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 20px rgb(88, 88, 88);
+    padding: 30px 5% 10px;
+    background-color: white;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+section h2 {
+    font-size: 3.5em;
+    color: #43B02A;
+}
+
+/*-- Reviews - position: relative --*/
+/* Елемент позиціонується відносно його поточної позиції */
+.reviews {
+    font-size: 0;
+}
+
+.review {
+    width: 31.33%;
+    display: inline-block;
+    text-align: center;
+    font-size: 1rem;
+    margin-right: 2%;
+    border: 1px solid #bbb;
+    vertical-align: top;
+    border-radius: 5px;
+    box-shadow: 1px 1px 2px #bbb;
+    padding: 30px 40px 5px;
+}
+
+.review::before {
+    content: url(../images/icons/quots.svg);
+    display: block;
+}
+
+.review:last-child {
+    margin-right: 0;
+}
+
+.review .author {
+    font-weight: bold;
+}
+
+.review .author-img {
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    margin: 0 auto 0;
+    box-shadow: 5px 5px 20px rgb(95, 95, 95);
+
+    /* параметр приховує контент, який виходить за межі блоку */
+    overflow: hidden;
+
+    position: relative;
+    top: 40px;
+}
+
+.author-img img {
+    width: 100%;
+}
+
+/*--- Teams - position: absolute  ---*/
+/*  Елемент позиціонується відносно елемента по ієрархії вище (предка) 
+    який являється позиціонованим (має параметр position відмінний від static) */
+.teams {
+    font-size: 0;
+}
+
+.team {
+    font-size: 1rem;
+    display: inline-block;
+    width: 23%;
+    margin-right: 2%;
+    background-color: #4e4e4e;
+    color: #fff;
+    padding: 40px;
+    vertical-align: top;
+    border-radius: 15px;
+    box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+
+    position: relative;
+}
+
+.team:last-child {
+    margin-right: 0;
+}
+
+.team h3 {
+    text-align: center;
+    margin: 10px 40px 50px 20px;
+}
+
+.icon {
+    float: right;
+    margin-right: -15px;
+}
+
+.circle {
+    width: 60px;
+    height: 60px;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    text-align: center;
+    color: #333;
+    font-weight: bold;
+    font-size: 1.4rem;
+    padding-top: 15px;
+    background-image: linear-gradient(#ccc, #fff);
+
+    position: absolute;
+    left: -20px;
+    top: 20px;
+    z-index: 1;
+}
+
+.circle-back {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-image: linear-gradient(#ff0, #ffba00);
+    box-shadow: 2px 4px 2px 2px rgba(0, 0, 0, 0.14);
+
+    position: absolute;
+    left: -16px;
+    top: 17px;
+}
+
+.team:nth-of-type(2) .circle-back {
+    background-image: linear-gradient(#ff7c7c, #db3811);
+}
+
+.team:nth-of-type(3) .circle-back {
+    background-image: linear-gradient(#21e6d1, #08a392);
+}
+
+.team:nth-of-type(4) .circle-back {
+    background-image: linear-gradient(#be75f4, #7d1fc3);
+}
+
+/*--- Program - position: sticky  ---*/
+/* Елемент затримуєтся на певній відстані від сторін вікна браузера при прокрутці */
+.program-inner {
+    height: 380px;
+    overflow-y: scroll;
+}
+
+.program-inner h3 {
+    background-color: #fcc068;
+    color: #fff;
+    margin-top: 0;
+    margin-bottom: 20px;
+    padding: 10px;
+    clear: both;
+
+    position: sticky;
+    top: 0;
+}
+
+.program-inner h3:nth-of-type(3n-1) {
+    background-color: #24ad64;
+}
+
+.program-inner h3:nth-of-type(3n) {
+    background-color: #8026c1;
+}
+
+.alignright {
+    float: right;
+    border-radius: 6px;
+    margin: 0 8px 20px 15px;
+    max-width: 450px;
+    box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+}
+
+/* .clear {
+    clear: both;
+} */
+
+/* Footer */
+footer {
+    text-align: center;
+    margin: 10px auto;
+    padding: 10px;
+    font-size: 1.3em;
+    border-top: 1px solid silver;
+    width: 50%;
+}
