@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Transform</title>
+  <style>
+    body {
+      background-color: white;
+    }
+
+    .box {
+      width: 200px;
+      height: 200px;
+      margin: 20px;
+      display: inline-block;
+      border: 3px solid black;
+      border-top-color: blue;
+      border-right-color: yellow;
+      border-bottom-color: red;
+
+      transition: transform 0.5s;
+    }
+
+    .translate:hover {
+      transform: translate(20px, -20px);
+    }
+
+    .scale:hover {
+      transform: scale(1.2);
+      /* transform: scale(1.4, 1.1); */
+      /* transform-origin: 0% 50%; */
+    }
+
+    .rotate:hover {
+      transform: rotate(45deg);
+    }
+
+    .origin {
+      transform-origin: right top;
+      /* in percentage: horizontal(0-100%) vertical(0-100%) */
+      /* transform-origin: 100% 50%; */
+    }
+
+    .skew:hover {
+      transform: skew(10deg, 5deg);
+    }
+
+    .matrix:hover {
+      /* matrix( scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY() ) */
+      transform: matrix(1.1, 1, -2, 1.1, 10, 10);
+    }
+
+    @keyframes round {
+      from {
+        transform: rotate(0deg);
+      }
+
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .animation {
+      /* animation: name duration timing-function(ease) delay(0) iteration-count direction fill-mode; */
+      /* animation: round 5s ease 1s infinite alternate; */
+    }
+
+    .animation2 {
+      /* animation: zigzag 4s; */
+    }
+
+    @keyframes zigzag {
+      0% {
+        transform: rotate(0);
+      }
+
+      40% {
+        transform: rotate(180deg);
+      }
+
+      60% {
+        transform: rotate(90deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    .animation3 {
+      animation: move 2s 3s both;
+
+      /* завершення амінація залишає елемент на останньому кадрі */
+      /* animation-fill-mode: forwards; */
+
+      /* очікування початку анімації проходить на 1-му кадрі */
+      /* animation-fill-mode: backwards; */
+    }
+
+    @keyframes move {
+      from {
+        transform: translate(30px, 30px);
+      }
+
+      to {
+        transform: translate(70px, 70px);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- <h2>transform + transition</h2>
+  <div class="box translate"></div>
+  <div class="box scale"></div>
+  <div class="box rotate"></div>
+  <div class="box rotate origin"></div>
+  <div class="box skew"></div>
+  <div class="box matrix"></div> -->
+
+  <h2>transform + animation</h2>
+  <div class="box animation"></div>
+  <div class="box animation2"></div>
+  <div class="box animation3"></div>
+</body>
+
+</html>
